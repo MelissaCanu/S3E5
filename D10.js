@@ -116,11 +116,32 @@ console.log(arrSplitString);
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
 
+function deleteOne(string2, firstChar) {
+  if (firstChar) {
+    return string2.substring(1);
+  } else {
+    return string2.substring(0, string2.length - 1); // ho dovuto riguardarmi substring per arrivare a questo
+  }
+}
+
+let firstChar = false;
+let string2 = "Unleash The Archers";
+let resultString = deleteOne(string2, firstChar);
+console.log(resultString);
+
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
 
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
+
+function onlyLetters(string3) {
+  return string3.replace(/[0-9]/g, ""); // cercato su google, capito che per rimuovere anche il secondo numero devo includere "g"
+}
+
+let string3 = "I am 34 years old and my dog is 8 years old";
+let resultString3 = onlyLetters(string3);
+console.log(resultString3);
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
