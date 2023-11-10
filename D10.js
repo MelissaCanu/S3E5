@@ -475,35 +475,84 @@ console.log("Array Unmatch: ", unmatch);
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
 */
 
+function removeIndex(movies, number) {} // non riesco, mi butto sul dom
+
 // DOM (nota: gli elementi che selezionerai non si trovano realmente nella pagina)
 
 /* ESERCIZIO 20
   Scrivi una funzione per selezionare l'elemento dotato di id "container" all'interno della pagina.
 */
 
+function selectElId() {
+  let containerEl = document.getElementById("container");
+  return containerEl;
+}
+selectElId();
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function allTds() {
+  let allTheTds = document.querySelectorAll("td");
+  return allTds;
+}
+allTds();
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
 
+function printTdContent() {
+  let allTheTds = document.querySelectorAll("td");
+  allTheTds.forEach((td) => {
+    console.log(td.innerText);
+  });
+}
+printTdContent();
+
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function addRedBg() {
+  let allLinks = document.querySelectorAll("a");
+  allLinks.forEach((a) => {
+    a.style.backgroundColor = "red";
+  });
+}
+addRedBg();
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function newLi() {
+  let newLiEl = document.createElement("li");
+  newLiEl.innerText = "miao";
+  document.getElementById("myList").appendChild(newLiEl);
+}
+
+newLi();
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function deleteLis() {
+  document.getElementById("myList").innerHTML = "";
+}
+
+deleteLis();
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
+
+function addClassToTr() {
+  let allTrs = document.querySelectorAll("tr");
+  allTrs.forEach((tr) => {
+    tr.setAttribute("class", test);
+  });
+}
 
 // [EXTRA] JS Avanzato
 
