@@ -440,14 +440,28 @@ console.log(onlyInLastMillennium(movies));
   Scrivi una funzione chiamata "sumAllTheYears" che ritorna la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array "movies" fornito.
 */
 
+function sumAllTheYears(movies) {
+  return movies.reduce((sum, curr) => sum + parseInt(curr.Year), 0);
+}
+
+console.log(sumAllTheYears(movies));
+
 /* ESERCIZIO 17
   Scrivi una funzione chiamata "searchByTitle" che riceve una stringa come parametro e ritorna i film nell'array "movies" fornito che la contengono nel titolo.
 */
+
+function searchByTitle(movies, str) {
+  return movies.filter((movie) => movie.Title.toLowerCase().includes(str.toLowerCase()));
+} // filter per tutti find per uno
+
+console.log(searchByTitle(movies, "lord"));
 
 /* ESERCIZIO 18
   Scrivi una funzione chiamata "searchAndDivide" che riceve una stringa come parametro e ritorna un oggetto contenente due array: "match" e "unmatch".
   "match" deve includere tutti i film dell'array "movies" fornito che contengono la stringa fornita all'interno del proprio titolo, mentre "unmatch" deve includere tutti i rimanenti.
 */
+
+function searchAndDivide(string5) {}
 
 /* ESERCIZIO 19
   Scrivi una funzione chiamata "removeIndex" che riceve un numero come parametro e ritorna l'array "movies" fornito privo dell'elemento nella posizione ricevuta come parametro.
