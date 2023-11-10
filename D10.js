@@ -67,9 +67,35 @@ me.skills.pop();
   Crea una funzione chiamata "dice": deve generare un numero casuale tra 1 e 6.
 */
 
+function dice() {
+  numeroCasuale = Math.floor(Math.random() * 6) + 1;
+  console.log(numeroCasuale);
+}
+
+dice();
+
 /* ESERCIZIO 2
   Crea una funzione chiamata "whoIsBigger" che riceve due numeri come parametri e ritorna il maggiore dei due.
 */
+
+// ripasso l'operatore ternario e ricomincio! ->
+
+function whoIsBigger(num1, num2) {
+  return num1 > num2 ? num1 : num2;
+}
+console.log(whoIsBigger(6, 25));
+
+// o
+
+function whoIsBigger2(num1, num2) {
+  if (num1 > num2) {
+    return num1;
+  } else {
+    return num2;
+  }
+}
+
+console.log(whoIsBigger2(30, 13));
 
 /* ESERCIZIO 3
   Crea una funzione chiamata "splitMe" che riceve una stringa come parametro e ritorna un'array contenente ogni parola della stringa.
